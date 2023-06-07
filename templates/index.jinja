@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../modules/reveal/dist/reveal.css" />
+  <link rel="stylesheet" href="../modules/reveal/dist/theme/solarized.css" />
+
+  <style>
+    #tamka {
+      font-family: Purisa;
+      font-size: 150px;
+    }
+  </style>
+
+
+  <title>Presentation</title>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>
+          Conception d'une application d'apprenstissage de la prononciation de
+          la langue française
+        </h2>
+      </section>
+      <section id="dedicaces">
+        {%include "./components/introduction.jinja"%}
+      </section>
+      <section>
+        {%include "./components/resume.jinja"%}
+      </section>
+    </div>
+  </div>
+  <script type="module">
+    import Reveal from "../modules/reveal/dist/reveal.esm.js";
+    import RevealNotes from "../modules/reveal/plugin/notes/notes.esm.js";
+    Reveal.initialize({
+      hash: true,
+      plugins: [RevealNotes],
+      backgroundTransition: 'zoom',
+    });
+    Reveal.configure({ pdfMaxPagesPerSlide: 1 })
+
+    const text = document.getElementById('tamka');
+    const colors = ['red', 'orange', 'pink', 'green', 'blue', 'purple'];
+
+    text.innerHTML = text.textContent.split('').map((char, i) => {
+      return `<span style="color: ${colors[i % colors.length]}">${char}</span>`;
+
+    }).join('');
+
+  </script>
+</body>
+
+</html>

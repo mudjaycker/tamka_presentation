@@ -1,43 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../modules/reveal/dist/reveal.css" />
-    <link rel="stylesheet" href="../modules/reveal/dist/theme/dracula.css" />
-    <title>Presentation</title>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section><section>DEDICACES</section>
-<section>
-  <h2>Pour BUTOYI Tom Christian</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../modules/reveal/dist/reveal.css" />
+  <link rel="stylesheet" href="../modules/reveal/dist/theme/solarized.css" />
+
+  <style>
+    #tamka {
+      font-family: Purisa;
+      font-size: 150px;
+    }
+  </style>
+
+
+  <title>Presentation</title>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>
+          Conception d'une application d'apprenstissage de la prononciation de
+          la langue française
+        </h2>
+      </section>
+      <section id="dedicaces">
+        <section>DEDICACES</section>
+<section  style="color: white"  data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)" data-auto-animate>
+  <h2  style="color: white" >Pour BUTOYI Tom Christian</h2>
   <ul>
     <li class="fragment">À mon défunt Père</li>
-    <li class="fragment">À ma Mère</li>
+    <li class="fragment">A la Femme qui m’a donnée la vie, ma regrettée Mère</li>
+    <li class="fragment">A la Femme qui m’a donnée l’Amour maternel dont un enfant a besoin, ISHIMWE Eline Mimi</li>
     <li class="fragment">À mon Frère et mes Sœurs</li>
   </ul>
+
+  <aside class="notes">
+    J'exprime ma profonde gratitude et mes remerciements à mon regretté Père BUTOYI Jean Marc car il fût ma muse de son
+    vivant. A ma bien-aimée Mère ISHIMWE Eline Mimi, pour sa tendresse, son appui, ses encouragements et ses soins
+    dignes des parents sages.
+  </aside>
 </section>
-<section>
-  <h2>Pour INGABIRE Emmanuella BUNTU</h2>
+
+<section  style="color: black"  data-background-color="rgb(31, 185, 194)" data-auto-animate>
+  <h2  style="color: black" >Pour INGABIRE Emmanuella BUNTU</h2>
   <ul>
     <li class="fragment">À mes Très chers Parents</li>
     <li class="fragment">À mes Frères et Sœur</li>
     <li class="fragment">À ma tendre Grand-mère.</li>
   </ul>
-</section></section>
-        <section>Slide</section>
-      </div>
+
+  <aside class="notes">
+    <p>
+      Mes plus sincères sentiments de gratitude vont au Tout-Puissant, Créateur de l’univers et de tout objet de toute
+      Science.
+    </p>
+    <p>
+      Je remercie de tout cœur mes parents, MPENGEKEZE Joseph et RUSAGE Françoise pour leur amour et soutien
+      inconditionnel en tout temps. A ma grand-mère, KABUNDA Oladie, pour ses prières qu’elle a inlaçablement prononcées
+      en ma faveur.
+    </p>
+    <p>
+      A ma sœur et mes frères : ITANGITEKA Ciella Amandine, DUSHIME Abidân Laprière, BAYIYAGE Marc Cardin,
+      BAYISHEMEZE Don Béni et IRIMBABAZI Blaise Bel Ami pour leurs encouragements.
+    </p>
+  </aside>
+</section>
+
+<!-- <style> -->
+<!-- .test{ -->
+<!-- color: rgb(31, 185, 194); -->
+<!-- } -->
+<!-- </style> -->
+      </section>
+      <section>
+        <section>
+    <h2 id="tamka">TAMKA</h2>
+</section>
+
+<section>
+    Tamka! Du Swahili «prononce», est une application qui utilise
+    les technologies de reconnaissance vocale et de synthèse vocale
+    afin de proposer des solutions en matière de prononciation de langue
+    française en premier lieu et de l'anglais
+</section>
+
+<section>
+    <p>
+        La bonne prononciation des mots étant très capitale dans l'usage d'une
+        langue, le dur constat est que ce sujet n'est pas assez vulgariser.
+    </p>
+
+    <p>
+        Tout de même il faut reconnaitre le travail de normalisation de la phonétique
+        abbatut par les entités comme l'académie de la langue française.
+    </p>
+
+    <p>
+        Toutefois cela ne semble pas assez suffisant car ce travail de normalisation est
+        très généralisant et inaccessible pour les personne n'ayant aucune notion en phonétique.
+    </p>
+</section>
+
+<section>
+    <p>
+        Le defis auquel une application comme <strong>TAMKA</strong> doit faire
+        face réside donc dans l'intimité dans le cadre des exercices de prononciation
+        tout en gardant un aspect ludique(jeux) afin de garder l'apprenant dans une
+        ambiance hors de la frustation des echecs, et de présenter chaque session
+        comme un défis.
+    </p>
+</section>
+      </section>
     </div>
-    <script type="module">
-      import Reveal from "../modules/reveal/dist/reveal.esm.js";
-      import RevealNotes from "../modules/reveal/plugin/notes/notes.esm.js";
-      Reveal.initialize({
-        hash: true,
-        plugins: [RevealNotes],
-      });
-    </script>
-  </body>
+  </div>
+  <script type="module">
+    import Reveal from "../modules/reveal/dist/reveal.esm.js";
+    import RevealNotes from "../modules/reveal/plugin/notes/notes.esm.js";
+    Reveal.initialize({
+      hash: true,
+      plugins: [RevealNotes],
+      backgroundTransition: 'zoom',
+    });
+    Reveal.configure({ pdfMaxPagesPerSlide: 1 })
+
+    const text = document.getElementById('tamka');
+    const colors = ['red', 'orange', 'pink', 'green', 'blue', 'purple'];
+
+    text.innerHTML = text.textContent.split('').map((char, i) => {
+      return `<span style="color: ${colors[i % colors.length]}">${char}</span>`;
+
+    }).join('');
+
+  </script>
+</body>
+
 </html>
