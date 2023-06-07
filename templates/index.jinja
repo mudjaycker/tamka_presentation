@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="../modules/reveal/dist/theme/solarized.css" />
 
   <style>
-    #tamka {
-      font-family: Purisa;
+    .big-font {
       font-size: 150px;
+      /*background-color: linear-gradient(to left, #caaf34, #b16010);*/
     }
   </style>
 
@@ -45,14 +45,18 @@
       backgroundTransition: 'zoom',
     });
     Reveal.configure({ pdfMaxPagesPerSlide: 1 })
+    function colorize(id) {
+      const text = document.getElementById(id);
+      const colors = ['red', 'orange', 'pink', 'green', 'blue', 'purple'];
 
-    const text = document.getElementById('tamka');
-    const colors = ['red', 'orange', 'pink', 'green', 'blue', 'purple'];
+      text.innerHTML = text.textContent.split('').map((char, i) => {
+        return `<span style="color: ${colors[i % colors.length]}; font-family: Purisa">${char}</span>`;
 
-    text.innerHTML = text.textContent.split('').map((char, i) => {
-      return `<span style="color: ${colors[i % colors.length]}">${char}</span>`;
+      }).join('');
 
-    }).join('');
+    }
+    const tamkaIDs = ["tamka-1", "tamka-2", "tamka-3"]
+    tamkaIDs.map((t) => { colorize(t) })
 
   </script>
 </body>
